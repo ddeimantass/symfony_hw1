@@ -7,7 +7,7 @@
         <ul class="list-group">
             {% for id, student in students %}
                 <li class="list-group-item">
-                    <a href="{{ path('student')}}?{{ {'utm_source': 'akademija', 'utm_campaign': student.mentor, 'utm_term': student.name, 'utm_content': student.team }| url_encode}}">{{ student.name }}</a>
+                    <a href="{{ path('student', {'utm_source': 'akademija', 'utm_campaign': student.mentor, 'utm_term': student.name, 'utm_content': student.team} ) }}">{{ student.name }}</a>
                 </li>
             {% endfor %}
         </ul>
