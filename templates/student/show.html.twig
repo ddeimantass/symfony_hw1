@@ -2,24 +2,30 @@
 
 {% block title %}Vertinimai{% endblock %}
 {% block body %}
-    {% if student %}
+    {% if academy %}
         <table class="table">
             <tbody>
+        {% if team %}
             <tr>
                 <th scope="row">Komanda</th>
-                <td>{{ student.team }}</td>
+                <td>{{ team }}</td>
             </tr>
+        {% endif %}
+        {% if mentor %}
             <tr>
                 <th scope="row">Mentorius</th>
-                <td>{{ student.mentor }}</td>
+                <td>{{ mentor }}</td>
             </tr>
+        {% endif %}
+        {% if name %}
             <tr>
                 <th scope="row">Laimingasis(-oji)</th>
-                <td>{{ student.name }}</td>
+                <td>{{ name }}</td>
             </tr>
+        {% endif %}
             </tbody>
         </table>
-        {% if student.name == "Deimantas" %}
+        {% if name == "Deimantas" %}
             <div class="alert alert-success" role="alert">
                 Dešimt balų
             </div>
